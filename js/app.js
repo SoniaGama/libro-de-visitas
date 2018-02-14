@@ -13,18 +13,25 @@ var $textRight = $('#text-right');
 var submit = $('#submit');
 
 var containerComment = $('#container-comment');
+var commentExample = $('#coments-example');
 
+// textarea
 var userComments = $('#user-comment-text');
 
 
 function loadPage (){
-    submit.click(comments);
+    userComments.keyup(comments);
 }
+
+// Elementos para funcion comments
+var $keyComment = $('<p />');
+containerComment.append($keyComment);
 
 // funcion para pintar comentario
 function comments (event) {
     event.preventDefault();
-    console.log(userComments.val());  
+    // console.log(userComments.val());  
+    $keyComment.text(userComments.val());
     
 }
 
