@@ -1,54 +1,70 @@
-// traemos elementos
-var $textLarge = $('#text-large'); 
-var $textMedium = $('#text-medium');
-var $textSmall = $('#text-small');
+// comentarios dummy
+var $commentOne = $('#one');
+var $commentTwo = $('#two');
 
-var $colorText = $('#color-text');
-var $colorBackground = $('#color-background');
-
-var $textLeft = $('#text-left');
-var $textCenter = $('#text-center');
-var $textRight = $('#text-right');
-
+// boton para enviar el text
 var submit = $('#submit');
 
-var containerComment = $('#container-comment');
-var commentExample = $('#coments-example');
+// Espacio donde se pintan los comentarios antes de mandarlos
+var $commentsEdit = $('#comments-edit');
 
-// textarea
-var userComments = $('#user-comment-text');
-
-
-function loadPage (){
-    userComments.keyup(comments);
+//funcion que carga la página
+function loadPage() {
+    $('#user-comment-text').keyup(commentsEditVal); //funcion para pintar en tiempo real el comentario
+    $('.change-color-text').click(changeColor); //función para cambiar el color del text
+    $('.change-color-background').click(changeBackground); //funcion para cambiar el color de fondo
+    $('.change-size').click(changeSizeText); //funcion para cambiar el tamaño de letra
+    $('.change-direction').click(changeDirectionText); // funcion para cambiar la direccion del texto
 }
 
-// Elementos para funcion comments
-var $keyComment = $('<p />');
-containerComment.append($keyComment);
 
-// funcion para pintar comentario
-function comments (event) {
-    event.preventDefault();
-    // console.log(userComments.val());  
-    $keyComment.text(userComments.val());
-    
+// funcion para pintar comentario de muestra
+function commentsEditVal(e) {
+    e.preventDefault();
+    $commentsEdit.text($userComments.val());
 }
 
-function sixeText (){
+// funcion para cambiar el tamaño dle texto
+function changeSizeText() {
+    var sizeText = this.dataset.size;
+    $commentsEdit[0].style.fontSize = sizeText;
+}
+
+// funcion para cambiar el color del texto
+function changeColor(e) {
+    var colorData = this.dataset.color;
+    $commentsEdit[0].style.color = colorData;
+}
+
+// funcion para cambiar el color de fondo
+function changeBackground() {
+    var colorBackground = this.dataset.background;
+    $commentsEdit[0].style.backgroundColor = colorBackground;
+}
+
+// funcion para cambiar la alineacion del texto
+function changeDirectionText() {
+    var $textDirection = this.dataset.direction;
+    $commentsEdit[0].style.textAlign = $textDirection;
+}
+
+// funcion para enviar comentario
+function paintComment() {
 
 }
 
-function colorText() {
+// function commentsDummy() {    
+// }
 
-}
 
-function colorBackground() {
-
-}
-
-function directionText () {
-
-}
 
 $(document).ready(loadPage);
+
+// function changeColor(e) {
+//     // console.log($commentsEdit); 
+//     var colorData = this.dataset.color;     
+//     $commentsEdit.each(element => {
+//         console.log(element);        
+//         element.style.color = $colorData;        
+//     });       
+// }

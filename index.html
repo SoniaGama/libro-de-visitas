@@ -22,14 +22,16 @@
     <section class="container">
         <section class="row" id="comments">
             <section class="row">
-                <p class="col-12">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod repellendus ratione similique quo inventore
-                    modi accusantium blanditiis eum, veniam perferendis aspernatur quidem nobis nam tempore unde reiciendis
-                    sed ut libero?
-                </p>
+                <h5 class="col-12">Comentarios pasados:</h5>
+            </section>
+            <section class="container-comment row">
+                <section class="row">
+                    <p class="col-12" id="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, iste suscipit animi, consectetur officia</p>
+                </section>
 
-                <p class="col-12">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, iste suscipit animi, consectetur officia
-                    sit praesentium soluta quisquam officiis quia odit molestias est voluptates itaque aperiam impedit. Excepturi,
-                    magni possimus.</p>
+                <section class="row">
+                    <p class="col-12" id="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, iste suscipit animi, consectetur officia</p>
+                </section>
             </section>
 
         </section>
@@ -41,39 +43,73 @@
         <section class="row btn-group d-flex justify-content-center" role="group" aria-label="Basic example">
 
             <!-- tamaño del texto -->
-            <button id="text-large" type="button" class="btn btn-secondary">Large</button>
-            <button id="text-medium" type="button" class="btn btn-secondary">Medium</button>
-            <button id="text-small" type="button" class="btn btn-secondary">Small</button>
+            <button data-size='50pt' id="text-large" type="button" class="change-size btn btn-outline-info">Large</button>
+            <button data-size='20pt' id="text-medium" type="button" class="change-size btn btn-outline-info">Medium</button>
+            <button data-size='10pt' id="text-small" type="button" class="change-size btn btn-outline-info">Small</button>
 
             <!-- color texto -->
-            <button id="color-text" type="button" class="btn btn-secondary">Color de texto</button>
-            <button id="color-background" type="button" class="btn btn-secondary">Color de fondo</button>
+            <div class="dropdown">
+                <button id="color-text" class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Color de texto
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <span data-color="#000" id="black" class="dropdown-item change-color-text">Black</span>
+                    <span data-color="#7C7D71" id="gray" class="dropdown-item change-color-text">Gray</span>
+                    <span data-color="#fff" id="white" class="dropdown-item change-color-text">White</span>
+                    <span data-color="#2026E5" id="blue" class="dropdown-item change-color-text">Blue</span>
+                    <span data-color="#E5003B" id="red" class="dropdown-item change-color-text">Red</span>
+                    <span data-color="#7D0FE5" id="purple" class="dropdown-item change-color-text">Purple</span>
+                    <span data-color="#E59A2B" id="yellow" class="dropdown-item change-color-text">Yellow</span>
+                    <span data-color="#E55520" id="orange" class="dropdown-item change-color-text">Orange</span>
+                    <span data-color="#347F0B" id="green" class="dropdown-item change-color-text">Green</span>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button id="color-background" class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Color de fondo
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <span data-background="#000" class="dropdown-item change-color-background">Black</span>
+                    <span data-background="#7C7D71" class="dropdown-item change-color-background">Gray</span>
+                    <span data-background="#fff" class="dropdown-item change-color-background">White</span>
+                    <span data-background="#2026E5" class="dropdown-item change-color-background">Blue</span>
+                    <span data-background="#E5003B" class="dropdown-item change-color-background">Red</span>
+                    <span data-background="#7D0FE5" class="dropdown-item change-color-background">Purple</span>
+                    <span data-background="#E59A2B" class="dropdown-item change-color-background">Yellow</span>
+                    <span data-background="#E55520" class="dropdown-item change-color-background">Orange</span>
+                    <span data-background="#347F0B" class="dropdown-item change-color-background">Green</span>
+                </div>
+            </div>
 
             <!-- alineación del texto -->
-            <button id="text-left" type="button" class="btn btn-secondary">Izquierda</button>
-            <button id="text-center" type="button" class="btn btn-secondary">Centrar</button>
-            <button id="text-right" type="button" class="btn btn-secondary">Derecha</button>
+            <button data-direction="left" type="button" class="change-direction btn btn-outline-info">Izquierda</button>
+            <button data-direction="center" type="button" class="change-direction btn btn-outline-info">Centrar</button>
+            <button data-direction="right" type="button" class="change-direction btn btn-outline-info">Derecha</button>
+            <button data-direction="justify" type="button" class="change-direction btn btn-outline-info">Justificar</button>
         </section>
 
         <form class="form-group">
-            <section class="">
-                <textarea id="user-comment-text" class="col-12" id="user-coment" cols="90" rows="5" placeholder="Escribe tu comentario aqui ..."></textarea>
+            <section class="row">
+                <textarea id="user-comment-text" class="col-12" cols="90" rows="5" placeholder="Escribe tu comentario aqui ..."></textarea>
             </section>
 
-            <section class="d-flex justify-content-center comment-sample">
-                <p>Asi se veria tu comentario:</p>
-                <p id="example">Hola amigos</p>
-                <p id="coments-example"></p>
+            <section class="row">
+                <p class="col-12">Asi se veria tu comentario:</p>
             </section>
 
-            <section class="d-flex justify-content-center">
-                <button id="submit" type="submit" class="col-3 btn btn-primary">Enviar comentario</button>
+            <section class="row">
+                <p class="col-12" id="comments-edit"></p>
             </section>
+            <!-- <section class="row">
+                <p class="col-12" id="coments-edit"></p>
+            </section> -->
 
-            <section id="container-comment">
-
+            <section class="d-flex justify-content-center row">
+                <button id="submit" type="submit" class="col-4 btn btn-primary">Enviar comentario</button>
             </section>
-
         </form>
     </section>
 
@@ -85,6 +121,7 @@
         crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous"></script>
+    <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 </body>
 
