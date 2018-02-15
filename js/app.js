@@ -78,7 +78,7 @@ function paintComment(e) {
 // saveComments()
 
 // function showComents() {
-    
+
 //     for (var i in commentsSave) {
 //         var saved = commentsSave[i];
 //         var sectionRow = $('<section />').addClass('row');
@@ -86,6 +86,7 @@ function paintComment(e) {
 //         pComment.append(sectionRow).append($containerComment);
 
 //     }
+//// agregar el contenido con inner.HTML
 // }
 
 $(document).ready(loadPage);
