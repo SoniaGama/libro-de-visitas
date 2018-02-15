@@ -1,0 +1,101 @@
+.dropdown {
+    border-radius: none !important;
+
+}
+/* tamaño de fuente */
+
+.text-large-style {
+    font-size: 200%;
+}
+
+.text-medium-style {
+    font-size: 100%;
+}
+
+.text-small-style {
+    font-size: 50%;
+}
+
+
+/* colores de fuentes
+
+colores de fuentes bootstrap
+
+negro
+.text-dark
+
+gris:
+.text-secondary 
+
+blanco
+text-white
+
+azul
+.text-info 
+
+rojo:
+.text-danger
+
+amarillo:
+.text-warning
+
+verde:
+.text-success
+
+*/
+
+.orange-color-text {
+    color: #ff7f50;
+}
+
+.purple-color-text {
+    color: #800080;
+}
+
+
+/* color de fondo
+
+azul rey:
+.bg-primary 
+
+gris:
+.bg-secondary 
+
+verde:
+.bg-success 
+
+rojo:
+.bg-danger
+
+rojo:
+.bg-warning 
+
+azul claro:
+.bg-info 
+
+gris claro:
+.bg-light 
+
+negro
+.bg-dark
+
+blanco:
+.bg-white
+ */
+
+.orange-color-background {
+    background-color: #ff7f50;
+}
+
+.purple-color-background {
+    background-color: #800080;
+}
+
+
+/* alineación del texto
+
+.text-left 
+.text-center 
+.text-right 
+.text-justify
+ */
